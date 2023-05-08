@@ -41,8 +41,12 @@ const Launches = (): JSX.Element => {
                 <p>Date of launch: {launch_date_utc}</p>
               </div>
               <p>Name of rocket: {rocket.rocket_name}</p>
-              <p>Article link: {links.article_link}</p>
-              <p>Video link: {links.video_link}</p>
+              <p>
+                Article link: <a href={links.article_link}>{links.article_link}</a>
+              </p>
+              <p>
+                Video link: <a href={links.video_link}>{links.video_link}</a>
+              </p>
             </div>
           )
         )}
