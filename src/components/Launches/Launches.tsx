@@ -23,6 +23,8 @@ const Launches = (): JSX.Element => {
   const { loading, error, data } =
     useQuery<LaunchesPastResult>(GET_LAUNCHES_PAST);
 
+  console.log("error", error);
+
   if (loading) return <p>Loading...</p>;
   if (!data) return <p>Error: no launches found</p>;
   if (error) return <p>Error: {error.message}</p>;
